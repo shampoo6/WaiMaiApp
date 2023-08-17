@@ -1,0 +1,16 @@
+@import './twComponents/card/index.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn {
+        @apply
+        shadow-inner
+        active:shadow-inner
+        active:from-red-500
+        active:to-yellow-500
+        py-2 text-white bg-gradient-to-br from-blue-500 to-green-500
+    }
+}

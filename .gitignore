@@ -1,0 +1,7 @@
+.idea
+.vscode
+.vite
+.hbuilderx
+node_modules
+/server/alipaySdk.js
+/server/keys

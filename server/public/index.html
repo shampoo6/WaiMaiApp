@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="tradePay()">创建订单</button>
+</body>
+<script>
+    async function tradePay() {
+        fetch('http://1m85s39099.imwork.net:50641/wapPay', {
+            method: 'post'
+        }).then(res => res.json()).then(data => {
+            console.log(data)
+            const div = document.createElement('div')
+            div.innerHTML = data.result
+            console.log(div.children)
+            document.body.append(div.children[0])
+            eval(div.children[0].textContent)
+            div.remove()
+        })
+    }
+</script>
+</html>
